@@ -22,7 +22,7 @@
     virtualHosts."lestrade.syncthing" = {
       extraConfig = ''
         reverse_proxy http://127.0.0.1:8384
-        tls off
+        tls internal
       '';
     };
   };
