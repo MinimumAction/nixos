@@ -11,7 +11,7 @@
         "100.78.210.41" 
       ];
       address = [
-        "/lestrade.syncthing/100.78.210.41";  # NixOS server’s Tailscale IP
+        "/lestrade.syncthing/100.78.210.41"  # NixOS server’s Tailscale IP
       ];
     };
   };
