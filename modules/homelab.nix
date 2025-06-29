@@ -6,10 +6,13 @@
   services.dnsmasq = {
     enable = true;
     settings = {
-      listen-address = [ "100.64.0.1" "127.0.0.1" ];
-      address = {
+      listen-address = [
+        "127.0.0.1" 
+        "100.78.210.41" 
+      ];
+      address = [
         "/lestrade.syncthing/100.78.210.41";  # NixOS server’s Tailscale IP
-      };
+      ];
     };
   };
 
