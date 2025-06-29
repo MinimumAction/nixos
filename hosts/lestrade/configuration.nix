@@ -50,4 +50,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
   };
 
+  services.syncthing.enable = false;
+  services.caddy.enable = false;
+
 }
