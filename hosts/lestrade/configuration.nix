@@ -9,6 +9,7 @@
     ./../../common/default.nix      # default settings, programs, packages and services  
     ./../../modules/hyprland.nix    # hyprland desktop environment
     ./../../modules/graphical.nix   # hyprland desktop environment
+    ./../../modules/homelab.nix   # hyprland desktop environment
   ];
 
   # DO NOT CHANGE
