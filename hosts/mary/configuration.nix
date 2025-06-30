@@ -11,8 +11,10 @@
 
   # Boot parameters to support zfs & include drivers for external wifi adapter 
   boot = {
-    supportedFilesystems = [ "zfs" ];
-    supportedFilesystems = [ "btrfs" ];
+    supportedFilesystems = [ 
+      "zfs"
+      "btrfs"
+    ];
     extraModulePackages = with config.boot.kernelPackages; [ rtl8812au ];
     initrd.kernelModules = [ "8812au" ];
   };
