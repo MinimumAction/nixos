@@ -22,6 +22,9 @@
     };
     supportedFilesystems = [ "zfs" ];
     zfs.forceImportRoot = true;
+    initrd.postDeviceCommands = lib.mkAfter ''
+      zfs rollback -r zpool/local/root@blank
+    '';
   };
 
   # Networking
