@@ -26,6 +26,7 @@
     fastfetch 
 
     # Storage
+    zfs
     btrfs-progs
     rsync
 

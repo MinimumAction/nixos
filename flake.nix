@@ -1,5 +1,5 @@
 {
-    
+
   description = "NixOS configurations";
 
   inputs = {
@@ -13,10 +13,19 @@
     in {
 
     nixosConfigurations = {
+      # lestrade XPS config
       lestrade = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/lestrade/configuration.nix
+        ];
+      };
+
+      # mary live iso config
+      mary = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/mary/configuration.nix
         ];
       };
     };
