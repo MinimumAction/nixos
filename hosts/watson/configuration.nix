@@ -28,6 +28,11 @@
     '';
   };
 
+  # Create etc files
+  environment.etc."NetworkManager/system-connections" = {
+    source = "/persist/etc/NetworkManager/system-connections/";
+  };
+
   # Networking
   networking = {
     hostName = "watson";
@@ -47,6 +52,7 @@
   # Users
   users.users.kevin = {
     isNormalUser = true;
+    hashedPassword = "$y$j9T$PtbhYydbhh.z0qInjgrQS1$0oLkk3FlJztVtmVJqpWQWCDs8kdX2zzMkJKQkkzAtu9";
     shell = pkgs.zsh;
     description = "Kevin Liguori";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
