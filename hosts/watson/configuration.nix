@@ -1,5 +1,5 @@
-# nixos/hosts/lestrade/configuration.nix
-# This module contains the config for a Dell XPS15 w/ Nvidia GPU
+# nixos/hosts/watson/configuration.nix
+# This module contains the config for a lenovo t14 w/ AMD CPU
 
 { config, lib, pkgs, ... }:{
 
@@ -15,21 +15,14 @@
   system.stateVersion = "25.05";
 
   # Boot settings
-  boot = {
-    # extra kernel modules to include
-    kernelModules = [ 
-      "sg" # for recognizing blu ray player
-    ]; 
-    # bootloader settings
-    loader = { 
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
+  boot.loader = { 
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
   };
 
   # Networking
   networking = {
-    hostName = "lestrade";
+    hostName = "watson";
     networkmanager.enable = true;
   };
 
@@ -43,7 +36,7 @@
   environment.systemPackages = with pkgs; [];
 
   # Users
-  users.users.minimumaction = {
+  users.users.kevin = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Kevin Liguori";

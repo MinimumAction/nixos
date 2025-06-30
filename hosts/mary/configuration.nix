@@ -1,5 +1,6 @@
-# nixos-config/hosts/mary/configuration.nix
+# nixos/hosts/mary/configuration.nix
 # This module contains the config for a live iso
+# To build, run "nix build .#nixosConfigurations.mary.config.system.build.isoImage"
 
 { config, lib, pkgs, modulesPath, ... }:{
 
