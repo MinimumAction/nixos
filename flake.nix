@@ -30,7 +30,7 @@
       };
 
       # watson thinkpas config
-      lestrade = nixpkgs.lib.nixosSystem {
+      watson = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/watson/configuration.nix

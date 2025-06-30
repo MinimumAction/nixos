@@ -15,14 +15,19 @@
   system.stateVersion = "25.05";
 
   # Boot settings
-  boot.loader = { 
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
+    loader = { 
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    supportedFilesystems = [ "zfs" ];
+    zfs.forceImportRoot = true;
   };
 
   # Networking
   networking = {
     hostName = "watson";
+    hostId = "36306665";
     networkmanager.enable = true;
   };
 
