@@ -23,6 +23,7 @@
     supportedFilesystems = [ "zfs" ];
     zfs.forceImportRoot = true;
     initrd.postDeviceCommands = lib.mkAfter ''
+      zpool import -Nf zpool
       zfs rollback -r zpool/local/root@blank
     '';
   };
