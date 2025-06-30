@@ -29,9 +29,11 @@
   };
 
   # Create etc files
-  environment.etc."NetworkManager/system-connections" = {
-    source = "/persist/etc/NetworkManager/system-connections/";
-  };
+  systemd.tmpfiles.rules = [
+  "d /persist/etc/NetworkManager/system-connections 0700 root root - -"
+  "L+ /etc/NetworkManager/system-connections - - - - /persist/etc/NetworkManager/system-connections"
+];
+
 
   # Networking
   networking = {
