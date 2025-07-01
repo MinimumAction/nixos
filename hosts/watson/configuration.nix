@@ -9,7 +9,6 @@
     ./../../common/default.nix      # default settings, programs, packages and services  
     ./../../common/graphical.nix    # common graphical packages
     ./../../modules/hyprland.nix    # hyprland desktop environment
-    ./../../modules/emacs.nix       # emacs support
   ];
 
   # DO NOT CHANGE
