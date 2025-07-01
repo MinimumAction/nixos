@@ -1,6 +1,6 @@
 { pkgs, ... }:{
   services.emacs = {
     enable = true;
-    package = pkgs.emacs-gtk; # emacs-gtk for wayland support
+    package = pkgs.emacs; # emacs-gtk for wayland support
   };
 }
