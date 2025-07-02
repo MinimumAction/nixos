@@ -50,4 +50,27 @@
       auth include login
     '';
   };
+
+  # Start hyprland on login
+  systemd.user.services.hyprland-session = {
+    description = "Hyprland via UWSM";
+    wantedBy = [ "default.target" ]; # Starts on login
+    serviceConfig = {
+      ExecStart = "${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop";
+      Restart = "on-failure";
+      Environment = "XDG_SESSION_TYPE=wayland";
+    };
+  };
+
+  # Start graphical-session when hyprland is launched
+  systemd.user.services.graphical-session-activate = {
+    description = "Activate graphical-session.target after Hyprland starts";
+    after = [ "hyprland-session.service" ];
+    wantedBy = [ "hyprland-session.service" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.systemd}/bin/systemctl --user start graphical-session.target";
+    };
+  };
+
 }
