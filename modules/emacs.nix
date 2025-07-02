@@ -1,14 +1,8 @@
 { pkgs, ... }:{
 
-  programs.emacs = {
+  services.emacs = {
     enable = true;
-    package = pkgs.emacs-gtk; # Use the gtk for wayland support
-    extraPackages = epkgs: with epkgs; [
-      use-package
-      magit
-    ];
+    package = pkgs.emacs-pgtk; # Use the gtk for wayland support
   };
-
-  systemd.user.services.emacs.enable = true;
 
 }
