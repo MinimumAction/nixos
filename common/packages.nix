@@ -8,6 +8,7 @@
 
     # Editors
     vim
+    emacs-pgtk
 
     # Networking
     curl
