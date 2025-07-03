@@ -39,7 +39,7 @@
     nil                      # Nix language server
     clang-tools              # C language server
     pyright                  # Python language server  
-    guile-lsp                # Guile (scheme) language server
+    scm-langserver           # Scheme language server
     haskell-language-server  # Haskell language server
   ];
 
