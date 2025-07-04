@@ -22,12 +22,18 @@
       stateVersion = "25.05";
     };
 
-    # Programs (maybe import in the future)
+    # Programs
     imports = [
+      
       # included for all hosts
+      ../modules/themes/dracula.nix                  # Dracula theme
+      ../modules/home-manager/waybar/waybar.nix      # Waybar theme
+      ../modules/home-manager/git/git.nix            # Git config
+      ../modules/home-manager/zsh/zsh.nix            # Zsh config
+      ../modules/home-manager/starship/starship.nix  # Starship config
+
     ] ++ lib.optionals (hostname == "watson") [
-      ../modules/home-manager/zsh/zsh.nix
-      ../modules/home-manager/starship/starship.nix
+      # only included for lestrade
     ] ++ lib.optionals (hostname == "lestrade") [
       # only included for lestrade
     ];
