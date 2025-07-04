@@ -21,7 +21,7 @@
 
   config = {
     home.packages = [
-      (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      pkgs.nerd-fonts.jetbrainsmono
     ];
   };
 }

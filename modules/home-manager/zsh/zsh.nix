@@ -7,7 +7,7 @@ in
   programs.zsh = {
     enable = true;
 
-    initExtra = ''
+    initContent = ''
       bindkey -v
       PROMPT='%F{${c.cyan}}%n@%m%f %F{${c.yellow}}%~%f %# '
     '';
