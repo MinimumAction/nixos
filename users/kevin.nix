@@ -3,7 +3,7 @@
   # User definition
   users.users.kevin = {
     isNormalUser = true;
-    hashedPasswordFile = "/persist/secrets/kevin-passwd.hash";
+    # hashedPasswordFile = "/persist/secrets/kevin-passwd.hash";
     shell = pkgs.zsh;
     description = "Kevin Liguori";
     extraGroups = [ 
