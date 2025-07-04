@@ -22,10 +22,10 @@
 
     # Programs (maybe import in the future)
     imports = [
-        # included for all hosts
-    ] ++ lib.optionals (hostname == "watson") [
+      # included for all hosts
       ../modules/home-manager/zsh/zsh.nix
       ../modules/home-manager/starship/starship.nix
+    ] ++ lib.optionals (hostname == "watson") [
     ] ++ lib.optionals (hostname == "lestrade") [
         # only included for lestrade
     ];
