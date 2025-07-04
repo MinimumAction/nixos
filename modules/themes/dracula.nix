@@ -1,4 +1,11 @@
 { pkgs, lib, config, ... }:{
+
+  options.theme = lib.mkOption {
+    type = lib.types.attrs;
+    description = "Global theme object containing Dracula colors.";
+    default = {};
+  };
+
   config.theme = {
     name = "dracula";
     colors = {
