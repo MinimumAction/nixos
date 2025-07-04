@@ -28,6 +28,7 @@
       # included for all hosts
       ../modules/themes/dracula.nix                  # Dracula theme
       ../modules/home-manager/waybar/waybar.nix      # Waybar theme
+      ../modules/home-manager/wofi/wofi.nix          # Wofi theme
       ../modules/home-manager/git/git.nix            # Git config
       ../modules/home-manager/zsh/zsh.nix            # Zsh config
       ../modules/home-manager/starship/starship.nix  # Starship config
