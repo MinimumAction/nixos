@@ -22,9 +22,6 @@
       stateVersion = "25.05";
     };
 
-    # Backup conflicting files  
-    manager.backupFileExtension = "backup";
-
     # Programs (maybe import in the future)
     imports = [
       # included for all hosts

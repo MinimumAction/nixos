@@ -17,8 +17,11 @@
   system.stateVersion = "25.05";
 
   # Home manager
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "backup";
+  };
 
   # Boot settings
   boot = {
