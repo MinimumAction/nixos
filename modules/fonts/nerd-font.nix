@@ -21,7 +21,7 @@
 
   config = {
     home.packages = [
-      pkgs.nerd-fonts.jetbrainsmono
+      pkgs.nerd-fonts.jetbrains-mono
     ];
   };
 }
