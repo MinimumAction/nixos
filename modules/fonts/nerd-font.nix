@@ -15,7 +15,7 @@
     size = lib.mkOption {
       type = lib.types.int;
       description = "Base font size in px";
-      default = 14;
+      default = 16;
     };
   };
 
