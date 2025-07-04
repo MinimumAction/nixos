@@ -13,13 +13,13 @@
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
     
     let 
-      systemType = "x86_64-linux";
+      system = "x86_64-linux";
     in 
     {
       nixosConfigurations = {
         # lestrade XPS config
         lestrade = nixpkgs.lib.nixosSystem {
-          inherit systemType;
+          inherit system;
           modules = [
             ./hosts/lestrade/configuration.nix
           ];
@@ -27,7 +27,7 @@
   
         # mary live iso config
         mary = nixpkgs.lib.nixosSystem {
-          inherit systemType;
+          inherit system;
           modules = [
             ./hosts/mary/configuration.nix
           ];
@@ -35,7 +35,7 @@
   
         # watson thinkpad config
         watson = nixpkgs.lib.nixosSystem {
-          inherit systemType;
+          inherit system;
           specialArgs = { # passed to modules
             inherit inputs;
             hostname = "mylaptop";  
