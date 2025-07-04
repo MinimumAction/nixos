@@ -11,7 +11,7 @@
       cl = "clear";
     };
 
-    initExtra = ''
+    initContent = ''
       bindkey -v
       PROMPT='%F{cyan}%n@%m%f %F{yellow}%~%f %# '
     '';

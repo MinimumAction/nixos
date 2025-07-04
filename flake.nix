@@ -38,7 +38,7 @@
           inherit system;
           specialArgs = { # passed to modules
             inherit inputs;
-            hostname = "mylaptop";  
+            hostname = "watson";  
           };
           modules = [
             ./hosts/watson/configuration.nix

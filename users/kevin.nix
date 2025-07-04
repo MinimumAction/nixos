@@ -16,18 +16,23 @@
 
   # Home-Manager imports and settings add logic to include different things for different hosts
   home-manager.users.kevin = {
-    home.username = "kevin";
-    home.homeDirectory = "/home/kevin";
-    home.stateVersion = "25.05";
+    home = {
+      username = "kevin";
+      homeDirectory = "/home/kevin";
+      stateVersion = "25.05";
+    };
+
+    # Backup conflicting files  
+    manager.backupFileExtension = "backup";
 
     # Programs (maybe import in the future)
     imports = [
       # included for all hosts
+    ] ++ lib.optionals (hostname == "watson") [
       ../modules/home-manager/zsh/zsh.nix
       ../modules/home-manager/starship/starship.nix
-    ] ++ lib.optionals (hostname == "watson") [
     ] ++ lib.optionals (hostname == "lestrade") [
-        # only included for lestrade
+      # only included for lestrade
     ];
 
     # Packages
