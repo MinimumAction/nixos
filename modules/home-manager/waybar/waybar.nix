@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
   
   let
+    f = config.fonts;
     c = config.theme.colors;
   in
   {
@@ -44,8 +45,8 @@
   
       style = ''
         * {
-          font-family: "MesloLGS Nerd Font Mono Bold";
-          font-size: 16px;
+          font-family: "${f.mono}";
+          font-size: ${toString f.size}px;
           font-weight: bold;
           color: ${c.foreground};
           background: ${c.background};

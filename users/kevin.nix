@@ -27,6 +27,7 @@
       
       # included for all hosts
       ../modules/themes/dracula.nix                  # Dracula theme
+      ../modules/fonts/nerd-font.nix                 # JetbrainsMono Nerd Font
       ../modules/home-manager/waybar/waybar.nix      # Waybar theme
       ../modules/home-manager/wofi/wofi.nix          # Wofi theme
       ../modules/home-manager/git/git.nix            # Git config
