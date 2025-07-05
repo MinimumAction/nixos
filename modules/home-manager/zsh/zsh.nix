@@ -8,7 +8,6 @@ in
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    plugins = [ pkgs.zsh-autosuggestions pkgs.zsh-syntax-highlighting ];
 
     shellAliases = {
       ll = "ls -lah";
