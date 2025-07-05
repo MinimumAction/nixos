@@ -10,6 +10,7 @@ in
     shellAliases = {
       ll = "ls -lah";
       gs = "git status";
+      cl = "clear";
       rebuild = "sudo nixos-rebuild switch --flake .#$(hostname)";
     };
 
